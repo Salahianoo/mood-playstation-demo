@@ -21,3 +21,4 @@ This repository only hosts the compiled demo (`app/`) and its landing page. The 
 ## Rebuilding
 
 `./build.sh` copies the app source (default `../MoodPlaystation`, or `MOOD_APP=…`) into `.build/`, applies the demo layer from `overlay/`, compiles it for the web and assembles the site into `docs/`, which GitHub Pages serves.
+# mood-playstation-demo
