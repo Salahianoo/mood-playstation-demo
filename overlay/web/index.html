@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <!-- Replaced by the `--base-href` argument given to `flutter build web`. -->
+  <base href="$FLUTTER_BASE_HREF">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Mood PlayStation — point of sale and operations for a PS5 lounge and café.">
+  <meta name="theme-color" content="#0A0F1E">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Mood">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>Mood PlayStation</title>
+  <link rel="manifest" href="manifest.json">
+
+  <style>
+    html, body { margin: 0; height: 100%; background: #0A0F1E; }
+    #splash {
+      position: fixed; inset: 0; display: grid; place-items: center;
+      background: radial-gradient(circle at 50% 45%, #13213b 0, #0A0F1E 62%);
+      transition: opacity .45s ease;
+    }
+    #splash.done { opacity: 0; pointer-events: none; }
+    #splash .stack { display: grid; justify-items: center; gap: 22px; }
+    #splash svg { width: 96px; animation: pulse 1.6s ease-in-out infinite; }
+    #splash .bar { width: 140px; height: 3px; border-radius: 3px; background: rgba(51,198,217,.16); overflow: hidden; }
+    #splash .bar::after { content: ""; display: block; width: 40%; height: 100%; background: #33C6D9; animation: slide 1.1s ease-in-out infinite; }
+    @keyframes pulse { 50% { transform: scale(.94); opacity: .72; } }
+    @keyframes slide { from { transform: translateX(-100%); } to { transform: translateX(260%); } }
+  </style>
+</head>
+<body>
+  <!-- Branded placeholder while CanvasKit downloads; removed on the first frame. -->
+  <div id="splash">
+    <div class="stack">
+      <svg viewBox="90 -20 1350 850" aria-hidden="true">
+        <path fill="#F3F6FB" d="M113 0 429 252 746 0v152L429 405 228 244v468l-115-91Z"/>
+        <path fill="#33C6D9" d="M271 328 429 455 746 202v414l-120 96V451L429 607 271 482Z"/>
+        <path fill="#F3F6FB" d="M818 76h210c12 0 22-8 32-21l20-35c5-4 10-4 20-4 50-2 100-4 120 14 20 15 25 35 28 50 4 15 10 20 17 25 55 45 95 115 103 195l50 350c12 90-38 150-98 156-50 4-100-36-140-71-50-45-80-115-85-167-5-13-20-15-29-5-56 52-136 65-186 37-30-15-50-40-62-68Z"/>
+        <g fill="#0A0F1E" stroke="#33C6D9" stroke-width="20"><circle cx="1162" cy="197" r="36"/><circle cx="1081" cy="277" r="36"/><circle cx="1246" cy="277" r="36"/><circle cx="1162" cy="365" r="36"/><circle cx="951" cy="464" r="80"/></g>
+      </svg>
+      <div class="bar"></div>
+    </div>
+  </div>
+  <script>
+    window.addEventListener('flutter-first-frame', function () {
+      var splash = document.getElementById('splash');
+      splash.classList.add('done');
+      setTimeout(function () { splash.remove(); }, 500);
+    });
+  </script>
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>

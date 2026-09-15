@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mood PlayStation — Lounge OS, live</title>
+  <meta name="description" content="The point-of-sale and operations system behind a real PS5 lounge and café in Jordan. Try the production Flutter app, running live in your browser.">
+  <meta name="theme-color" content="#0A0F1E">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Mood PlayStation — run a gaming lounge from one tablet">
+  <meta property="og:description" content="Live room billing, café tabs, inventory and the owner's books. Try the real Flutter app in your browser.">
+  <meta property="og:url" content="__SITE_URL__">
+  <meta property="og:image" content="__SITE_URL__assets/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;700&family=Space+Grotesk:wght@500;600;700&family=Tajawal:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="mark" viewBox="90 -20 1350 850">
+      <path fill="currentColor" d="M113 0 429 252 746 0v152L429 405 228 244v468l-115-91Z"/>
+      <path fill="#33C6D9" d="M271 328 429 455 746 202v414l-120 96V451L429 607 271 482Z"/>
+      <path fill="currentColor" d="M818 76h210c12 0 22-8 32-21l20-35c5-4 10-4 20-4 50-2 100-4 120 14 20 15 25 35 28 50 4 15 10 20 17 25 55 45 95 115 103 195l50 350c12 90-38 150-98 156-50 4-100-36-140-71-50-45-80-115-85-167-5-13-20-15-29-5-56 52-136 65-186 37-30-15-50-40-62-68Z"/>
+      <g fill="#0A0F1E" stroke="#33C6D9" stroke-width="20"><circle cx="1162" cy="197" r="36"/><circle cx="1081" cy="277" r="36"/><circle cx="1246" cy="277" r="36"/><circle cx="1162" cy="365" r="36"/><circle cx="951" cy="464" r="80"/></g>
+    </symbol>
+  </svg>
+
+  <header class="nav">
+    <div class="wrap nav__inner">
+      <a class="brand" href="#top" aria-label="Mood PlayStation home">
+        <svg class="brand__mark"><use href="#mark"/></svg>
+        <span>Mood <b>PlayStation</b></span>
+      </a>
+      <nav class="nav__links" aria-label="Sections">
+        <a href="#simulator">Simulator</a>
+        <a href="#features">Features</a>
+        <a href="#engineering">Engineering</a>
+      </nav>
+      <a class="btn btn--ghost btn--sm" data-profile="github" href="#" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.26 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>
+        GitHub
+      </a>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- ───────────── Hero ───────────── -->
+    <section class="hero">
+      <div class="hero__glow" aria-hidden="true"></div>
+      <div class="wrap hero__inner">
+        <p class="pill reveal"><span class="dot dot--live"></span> Live — the production app, compiled to the web</p>
+        <h1 class="reveal">Run a gaming lounge<br><span class="grad">from one tablet.</span></h1>
+        <p class="lede reveal">
+          Mood PlayStation is the point-of-sale and operations system I designed and built for a real
+          PS5 lounge and café in Jordan: live room billing, café tabs, inventory, and the owner's books.
+          The simulator below isn't a mockup. It's the Flutter app itself, with a busy evening already underway.
+        </p>
+        <div class="hero__cta reveal">
+          <a class="btn btn--primary" href="#simulator" data-launch>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5.14v13.72a1 1 0 0 0 1.5.86l11-6.86a1 1 0 0 0 0-1.72l-11-6.86A1 1 0 0 0 8 5.14Z"/></svg>
+            Launch the simulator
+          </a>
+          <a class="btn btn--ghost" href="#engineering">How it's built</a>
+        </div>
+        <dl class="stats reveal">
+          <div><dt>Lines of Dart</dt><dd data-count="11.8" data-suffix="k">11.8k</dd></div>
+          <div><dt>Feature modules</dt><dd data-count="8">8</dd></div>
+          <div><dt>Local data stores</dt><dd data-count="11">11</dd></div>
+          <div><dt>Needs the internet</dt><dd>Never</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ───────────── Simulator ───────────── -->
+    <section id="simulator" class="section section--sim">
+      <div class="wrap">
+        <div class="sim__head">
+          <div>
+            <p class="eyebrow">Interactive simulator</p>
+            <h2>Take a shift behind the counter</h2>
+          </div>
+          <div class="toolbar" role="toolbar" aria-label="Simulator controls">
+            <div class="seg" role="radiogroup" aria-label="Device">
+              <button class="seg__btn" role="radio" data-device="tablet" aria-checked="true">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+                Tablet
+              </button>
+              <button class="seg__btn" role="radio" data-device="phone" aria-checked="false">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+                Phone
+              </button>
+            </div>
+            <button class="btn btn--ghost btn--sm" data-reset title="Start the evening over with fresh data">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M4 12a8 8 0 1 0 2.34-5.66M4 4v4h4"/></svg>
+              Reset demo
+            </button>
+            <a class="btn btn--ghost btn--sm" href="app/" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>
+              Full screen
+            </a>
+          </div>
+        </div>
+
+        <div class="stage" data-stage>
+          <div class="device" data-device-frame>
+            <div class="device__camera" aria-hidden="true"></div>
+            <div class="screen" data-screen>
+              <button class="poster" data-launch aria-label="Launch the live simulator">
+                <img class="poster__img poster__img--tablet" src="assets/poster-tablet.jpg" alt="" loading="lazy">
+                <img class="poster__img poster__img--phone" src="assets/poster-phone.jpg" alt="" loading="lazy">
+                <span class="poster__play">
+                  <span class="poster__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5.14v13.72a1 1 0 0 0 1.5.86l11-6.86a1 1 0 0 0 0-1.72l-11-6.86A1 1 0 0 0 8 5.14Z"/></svg></span>
+                  <span class="poster__label">Launch live simulator</span>
+                  <span class="poster__hint">~7 MB · runs entirely in your browser</span>
+                </span>
+              </button>
+              <div class="loader" aria-hidden="true">
+                <svg class="loader__mark"><use href="#mark"/></svg>
+                <span class="loader__bar"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="sim__note">
+          The interface is in Arabic, as it is on the lounge floor. Follow the missions below, or open the
+          <button class="linklike" data-glossary-open>Arabic cheat-sheet</button>.
+          Everything you do is saved in your own browser only.
+        </p>
+
+        <ol class="missions" data-missions>
+          <li class="mission reveal" data-mission="alarm">
+            <button class="mission__check" aria-label="Mark as done"></button>
+            <h3>Watch the floor</h3>
+            <p>Every card is a live meter. Room 2's prepaid hour runs out a few minutes after you arrive. When it does, the real alarm fires and jumps you to the room.</p>
+            <p class="chips" dir="rtl"><span class="ar">غرفة 2</span><span class="ar">انتهى الوقت المدفوع</span></p>
+          </li>
+          <li class="mission reveal" data-mission="start">
+            <button class="mission__check" aria-label="Mark as done"></button>
+            <h3>Open a room</h3>
+            <p>Tap Room 6 and start a session. You're asked whether they'll order first (billing waits), then how many controllers are in play.</p>
+            <p class="chips" dir="rtl"><span class="ar">غرفة 6</span><span class="ar">بدء الجلسة الآن</span><span class="ar">متابعة</span></p>
+          </li>
+          <li class="mission reveal" data-mission="sell">
+            <button class="mission__check" aria-label="Mark as done"></button>
+            <h3>Sell a drink</h3>
+            <p>Inside any running room, add a Pepsi. It comes straight out of stock, and Red Bull is already running low in Inventory.</p>
+            <p class="chips" dir="rtl"><span class="ar">إضافة عنصر</span><span class="ar">بيبسي</span><span class="ar">المخزون</span></p>
+          </li>
+          <li class="mission reveal" data-mission="move">
+            <button class="mission__check" aria-label="Mark as done"></button>
+            <h3>Move a group</h3>
+            <p>VIP 1 has four controllers and was already moved once. Move it to VIP 2: time already played keeps the rate it was played at.</p>
+            <p class="chips" dir="rtl"><span class="ar">VIP 1</span><span class="ar">نقل الغرفة</span><span class="ar">VIP 2</span></p>
+          </li>
+          <li class="mission reveal" data-mission="pay">
+            <button class="mission__check" aria-label="Mark as done"></button>
+            <h3>Check out</h3>
+            <p>End a session and take payment: add a discount, pick CliQ or cash, and watch the change-due calculator.</p>
+            <p class="chips" dir="rtl"><span class="ar">إنهاء الجلسة والدفع</span><span class="ar">إضافة خصم</span><span class="ar">كليك</span></p>
+          </li>
+          <li class="mission reveal" data-mission="books">
+            <button class="mission__check" aria-label="Mark as done"></button>
+            <h3>Open the owner's books</h3>
+            <p>In the shift tab, unlock the financial details with the password <code>demo</code>, then the monthly stocktake built from 45 days of closed shifts.</p>
+            <p class="chips" dir="rtl"><span class="ar">الوردية</span><span class="ar">التفاصيل المالية</span><span class="ar">الجرد الشهري</span></p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ───────────── Room state machine ───────────── -->
+    <section class="section">
+      <div class="wrap">
+        <p class="eyebrow reveal">One card, six states</p>
+        <h2 class="reveal">A room is never just “free” or “busy”</h2>
+        <p class="section__lede reveal">
+          Real lounges have friends who are late, controllers that die mid-match, and customers who prepaid for two hours.
+          Every room card reads its state from the session's timestamps. These replicas tick exactly the way the app does.
+        </p>
+        <div class="rooms" data-rooms>
+          <article class="room reveal" style="--c: var(--empty)">
+            <header><span class="room__icon"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M5 21V4a1 1 0 0 1 1-1h8l4 2v16h2v-2h-2 0M14 5v14H7V5h7Zm-2 7h1v1h-1z"/></svg></span><b class="ar">غرفة 6</b></header>
+            <div class="room__row"><span class="room__time">--:--:--</span><span class="status"><i></i><span class="ar">متاحة</span></span></div>
+            <div class="room__total room__total--muted ar">متاحة للتشغيل</div>
+            <footer>Available</footer>
+          </article>
+          <article class="room reveal" style="--c: var(--violet)">
+            <header><span class="room__icon"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M7 2v2H5a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-2V2h-2v2H9V2H7Zm12 7v10H5V9h14Zm-8.4 8.2L7.4 14l1.4-1.4 1.8 1.8 4.6-4.6 1.4 1.4-6 6Z"/></svg></span><b class="ar">غرفة 5</b></header>
+            <div class="room__row"><span class="room__time">--:--:--</span><span class="status"><i></i><span class="ar">محجوزة</span></span></div>
+            <div class="room__total room__total--booked ar" data-booking></div>
+            <footer>Booked · locked until they arrive</footer>
+          </article>
+          <article class="room room--on reveal" style="--c: var(--amber)">
+            <header><span class="room__icon"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M6 2h12v6l-4 4 4 4v6H6v-6l4-4-4-4V2Zm2 2v3.2l4 4 4-4V4H8Z"/></svg></span><b class="ar">غرفة 3</b></header>
+            <div class="room__row"><span class="room__time" data-clock="held" data-start="-420">00:07:00</span><span class="status"><i></i><span class="ar">بانتظار صديق</span></span></div>
+            <div class="room__total ar" data-total data-items="1.5">1.500 د.أ</div>
+            <footer>Waiting for a friend · orders, no time billed</footer>
+          </article>
+          <article class="room room--on reveal" style="--c: var(--green)">
+            <header><span class="room__icon"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M7.5 7h9a5.5 5.5 0 0 1 5.3 7l-.9 3.3a2.6 2.6 0 0 1-4.6.9L14.6 16H9.4l-1.7 2.2a2.6 2.6 0 0 1-4.6-.9L2.2 14a5.5 5.5 0 0 1 5.3-7ZM7 10v1.5H5.5v1.5H7v1.5h1.5V13H10v-1.5H8.5V10H7Zm8.5 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2Zm2.5-1.5a1 1 0 1 0 0 2 1 1 0 0 0 0-2Z"/></svg></span><b class="ar">غرفة 1</b></header>
+            <div class="room__row"><span class="room__time" data-clock="run" data-start="-4320">01:12:00</span><span class="status"><i></i><span class="ar">قيد التشغيل</span></span></div>
+            <div class="room__total ar" data-total data-items="3" data-rate="3.5">7.200 د.أ</div>
+            <footer>Running · 3.500 JOD / hour</footer>
+          </article>
+          <article class="room room--on reveal" style="--c: var(--blue)">
+            <header><span class="room__icon"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 1 1 0 20 10 10 0 0 1 0-20Zm0 2a8 8 0 1 0 0 16 8 8 0 0 0 0-16ZM9 8h2v8H9V8Zm4 0h2v8h-2V8Z"/></svg></span><b class="ar">غرفة 4</b></header>
+            <div class="room__row"><span class="room__time">00:37:00</span><span class="status"><i></i><span class="ar">موقوفة مؤقتًا</span></span></div>
+            <div class="room__total ar">4.158 د.أ</div>
+            <footer>Paused · the clock and the bill freeze</footer>
+          </article>
+          <article class="room room--on room--alert reveal" style="--c: var(--red)">
+            <header><span class="room__icon"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M9 1h6v2H9V1Zm10.03 6.39 1.42-1.42 1.41 1.42-1.42 1.41A9 9 0 0 1 5.1 20.13L3.7 21.55 2.28 20.13 20.13 2.28l1.42 1.42-2.52 2.51v1.18ZM12 5a8.9 8.9 0 0 1 5 1.53L6.53 17A9 9 0 0 1 12 5Zm7 9a7 7 0 0 1-10.47 6.08L18.08 10.5c.6 1.04.92 2.24.92 3.5Z"/></svg></span><b class="ar">غرفة 2</b></header>
+            <div class="room__row"><span class="room__time" data-clock="run" data-start="-3612">01:00:12</span><span class="status"><i></i><span class="ar">انتهى الوقت</span></span></div>
+            <div class="room__total ar" data-total data-items="1" data-rate="3.5">4.512 د.أ</div>
+            <footer>Prepaid hour is up · alarm + vibration</footer>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────────── Features ───────────── -->
+    <section id="features" class="section">
+      <div class="wrap">
+        <p class="eyebrow reveal">What it handles</p>
+        <h2 class="reveal">Every edge case the lounge floor throws at it</h2>
+        <div class="bento">
+          <article class="card card--wide reveal">
+            <span class="card__icon" style="--c: var(--teal)"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M12 7v5l3 2M21 12a9 9 0 1 1-9-9"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M17 3h4v4"/></svg></span>
+            <h3>Billing that survives a dead battery</h3>
+            <p>Time is never counted up in memory. Elapsed time is always derived from stored timestamps (start, pauses, carried segments), so a crash, a force-quit or a power cut mid-session never loses a single fils.</p>
+          </article>
+          <article class="card reveal">
+            <span class="card__icon" style="--c: var(--amber)"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M7 16H3v-4M3 16l6-6 4 4 8-8M21 6v4h-4"/></svg></span>
+            <h3>Pause, wait, transfer</h3>
+            <p>Hold a room while friends arrive, pause for a broken controller, move a group mid-game. Each segment keeps its own rate.</p>
+          </article>
+          <article class="card reveal">
+            <span class="card__icon" style="--c: var(--red)"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M6 8a6 6 0 1 1 12 0c0 7 3 9 3 9H3s3-2 3-9M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg></span>
+            <h3>Prepaid time &amp; bookings</h3>
+            <p>Prepaid sessions count down and fire a looping alarm with vibration that jumps staff to the room. Reservations lock a room until the guest shows up.</p>
+          </article>
+          <article class="card reveal">
+            <span class="card__icon" style="--c: var(--green)"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M21 8 12 3 3 8v8l9 5 9-5V8ZM3 8l9 5 9-5M12 13v8"/></svg></span>
+            <h3>POS wired to inventory</h3>
+            <p>Selling decrements stock, cancelling returns it, and sold-out items disable themselves. Cost price is snapshotted per sale, so margins stay honest.</p>
+          </article>
+          <article class="card reveal">
+            <span class="card__icon" style="--c: var(--violet)"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path stroke="currentColor" stroke-width="2" d="M2 10h20"/></svg></span>
+            <h3>Checkout in seconds</h3>
+            <p>Discounts in JOD or percent, cash / Visa / CliQ, a change-due calculator for the cashier, and bill numbers that never repeat.</p>
+          </article>
+          <article class="card card--full reveal">
+            <span class="card__icon" style="--c: var(--blue)"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M3 3v18h18M7 15l4-4 3 3 5-6"/></svg></span>
+            <h3>The owner's books, behind a lock</h3>
+            <p>Shift close with the drawer float, staff cash withdrawals, operating expenses, a 48-hour bill archive, a permanent shift log and a monthly stocktake with play hours, cost of goods and net profit. Staff run the floor; only the owner sees the money.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────────── Engineering ───────────── -->
+    <section id="engineering" class="section">
+      <div class="wrap">
+        <p class="eyebrow reveal">Engineering</p>
+        <h2 class="reveal">Built like it has to work at 2 a.m. with no Wi-Fi</h2>
+
+        <div class="eng">
+          <div class="arch reveal" aria-label="Architecture">
+            <div class="arch__layer">
+              <span class="arch__tag">UI</span>
+              <div class="arch__boxes"><span>Room grid</span><span>Café tables</span><span>Checkout</span><span>Shift books</span></div>
+            </div>
+            <div class="arch__arrow" aria-hidden="true"></div>
+            <div class="arch__layer arch__layer--accent">
+              <span class="arch__tag">State</span>
+              <div class="arch__boxes"><span>RoomsNotifier</span><span>CafeNotifier</span><span>InventoryNotifier</span><span>ShiftRecords</span></div>
+              <p class="arch__note">Riverpod · every mutation persists immediately</p>
+            </div>
+            <div class="arch__arrow" aria-hidden="true"></div>
+            <div class="arch__layer">
+              <span class="arch__tag">Logic</span>
+              <div class="arch__boxes"><span class="wide">BillingCalculator: pure, rounded to the fils</span></div>
+            </div>
+            <div class="arch__arrow" aria-hidden="true"></div>
+            <div class="arch__layer">
+              <span class="arch__tag">Storage</span>
+              <div class="arch__boxes"><span>Repositories</span><span class="wide">11 Hive boxes · plain maps, zero codegen</span></div>
+            </div>
+          </div>
+
+          <div class="code reveal">
+            <div class="code__bar"><i></i><i></i><i></i><span>session_model.dart</span></div>
+<pre><code><span class="c">/// Billed time in the current room: zero while waiting,</span>
+<span class="c">/// frozen while paused, net of every past pause.</span>
+<span class="t">Duration</span> <span class="f">segmentElapsed</span>(<span class="t">DateTime</span> now) {
+  <span class="k">if</span> (isWaiting) <span class="k">return</span> <span class="t">Duration</span>.zero;
+  <span class="k">final</span> end = isPaused ? pausedAt! : now;
+  <span class="k">final</span> raw = end.<span class="f">difference</span>(timerStartedAt!) - pausedDuration;
+  <span class="k">return</span> raw.isNegative ? <span class="t">Duration</span>.zero : raw;
+}
+
+<span class="c">/// Across every room this session has been moved through.</span>
+<span class="t">Duration</span> <span class="f">elapsed</span>(<span class="t">DateTime</span> now) =&gt;
+    carriedElapsed + <span class="f">segmentElapsed</span>(now);</code></pre>
+          </div>
+        </div>
+
+        <ul class="principles">
+          <li class="reveal"><b>Timestamps, not counters.</b> The one-second ticker only triggers repaints. It is never the source of truth.</li>
+          <li class="reveal"><b>Snapshots over references.</b> Price and cost are frozen onto each sale, so a price change never rewrites history.</li>
+          <li class="reveal"><b>Two layouts, one codebase.</b> Separate design baselines for a landscape tablet (1280×800) and a phone (390×844), so neither is a blown-up copy of the other.</li>
+          <li class="reveal"><b>Arabic-first.</b> Full right-to-left UI, Arabic month and weekday names, JOD with three decimals.</li>
+        </ul>
+
+        <div class="stack reveal" aria-label="Tech stack">
+          <span>Flutter 3</span><span>Dart 3</span><span>Riverpod</span><span>Hive</span><span>flutter_screenutil</span><span>audioplayers</span><span>vibration</span><span>Android · iOS · Web</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────────── Closing ───────────── -->
+    <section class="section section--end">
+      <div class="wrap">
+      <div class="end reveal">
+        <svg class="end__mark"><use href="#mark"/></svg>
+        <h2>Designed, built and shipped by <span data-profile="name">Salah</span></h2>
+        <p>From the first conversation with the owner to the tablet on the counter: product design, Flutter engineering and the business logic behind every bill.</p>
+        <div class="hero__cta">
+          <a class="btn btn--primary" data-profile="linkedin" href="#" target="_blank" rel="noopener" hidden>Connect on LinkedIn</a>
+          <a class="btn btn--ghost" data-profile="github" href="#" target="_blank" rel="noopener">More on GitHub</a>
+        </div>
+      </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot__inner">
+      <span>© <span data-year></span> Mood PlayStation. Demo build with sample data; source code is private.</span>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <dialog class="glossary" data-glossary>
+    <form method="dialog" class="glossary__inner">
+      <header>
+        <h3>Arabic cheat-sheet</h3>
+        <button class="glossary__close" aria-label="Close">✕</button>
+      </header>
+      <dl>
+        <div><dt class="ar">الصالة</dt><dd>Floor: rooms &amp; tables</dd></div>
+        <div><dt class="ar">بلايستيشن</dt><dd>PS5 rooms</dd></div>
+        <div><dt class="ar">الكوفي</dt><dd>Café tables</dd></div>
+        <div><dt class="ar">المخزون</dt><dd>Inventory</dd></div>
+        <div><dt class="ar">الأسعار</dt><dd>Pricing</dd></div>
+        <div><dt class="ar">الوردية</dt><dd>Shift &amp; books</dd></div>
+        <div><dt class="ar">متاحة</dt><dd>Available</dd></div>
+        <div><dt class="ar">محجوزة</dt><dd>Booked</dd></div>
+        <div><dt class="ar">بانتظار صديق</dt><dd>Waiting for a friend</dd></div>
+        <div><dt class="ar">قيد التشغيل</dt><dd>Running</dd></div>
+        <div><dt class="ar">موقوفة مؤقتًا</dt><dd>Paused</dd></div>
+        <div><dt class="ar">انتهى الوقت</dt><dd>Time's up</dd></div>
+        <div><dt class="ar">بدء الجلسة الآن</dt><dd>Start session now</dd></div>
+        <div><dt class="ar">إضافة عنصر</dt><dd>Add item</dd></div>
+        <div><dt class="ar">نقل الغرفة</dt><dd>Move to another room</dd></div>
+        <div><dt class="ar">إنهاء الجلسة والدفع</dt><dd>End session &amp; pay</dd></div>
+        <div><dt class="ar">كاش · فيزا · كليك</dt><dd>Cash · Visa · CliQ</dd></div>
+        <div><dt class="ar">إلغاء · تأكيد</dt><dd>Cancel · Confirm</dd></div>
+        <div><dt class="ar">د.أ</dt><dd>Jordanian dinar (JOD)</dd></div>
+      </dl>
+    </form>
+  </dialog>
+
+  <script src="main.js"></script>
+</body>
+</html>
