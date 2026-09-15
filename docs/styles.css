@@ -766,3 +766,40 @@ code {
   html { scroll-behavior: auto; }
   .reveal { opacity: 1; transform: none; }
 }
+
+/* ── The real store ──────────────────────────────────────── */
+.store {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  max-width: 560px;
+  margin-top: 36px;
+  padding: 16px 18px;
+  border-radius: 18px;
+  background: rgba(10, 15, 30, .55);
+  border: 1px solid var(--line-strong);
+  color: var(--text);
+  text-align: start;
+  text-decoration: none;
+  transition: border-color .25s, background .25s, transform .25s;
+}
+.store:hover { border-color: rgba(51, 198, 217, .6); background: rgba(51, 198, 217, .08); transform: translateY(-2px); }
+.store__pin {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  color: var(--red);
+  background: rgba(248, 113, 113, .12);
+  border: 1px solid rgba(248, 113, 113, .3);
+}
+.store__pin svg { width: 24px; height: 24px; }
+.store__text { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.store__text b { font: 600 1.05rem/1.3 var(--display); }
+.store__text span { color: var(--muted); font-size: .9rem; line-height: 1.4; }
+.store__go { flex: none; margin-inline-start: auto; color: var(--teal); }
+.store__go svg { width: 22px; height: 22px; transition: transform .25s; }
+.store:hover .store__go svg { transform: translate(2px, -2px); }
