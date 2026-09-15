@@ -2,7 +2,7 @@
 const PROFILE = {
   name: 'Salah',
   github: 'https://github.com/Salahianoo',
-  linkedin: '',
+  linkedin: 'https://www.linkedin.com/in/salah-abushamseih-aa1864305/',
 };
 
 document.documentElement.classList.remove('no-js');
